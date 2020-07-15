@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+		<title>咕咕音乐</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+	<body>
+		<!-- 背景 -->
+		<div class="BG"></div>
+		<div class="mobileTerminal">
+			<!-- 顶部工具栏 -->
+			<div class="topToolbar">
+				<div class="topToolbar_box">
+					<!-- 听歌识曲 -->
+					<div class="Umusic" id="Umusic">
+						<div class="Umusic_icon"></div>
+					</div>
+					<!-- 搜索框 -->
+					<div class="search" id="search">
+						<div class="search_box" id="search_box">
+							<input type="text" autocomplete="off" placeholder="飞鸟和蝉" class="search_inpt" id="search_inpt"/>
+						</div>
+					</div>
+					<!-- 用户头像 -->
+					<div class="user" id="user">
+						<div class="user_box">
+							<img src="images/index/IMG_3690(20191231-180750).png">
+							<!-- <img src="./images/index/9AE23F4E7AC1B0A46736C9CB751A400F.png" > -->
+						</div>
+					</div>
+					<!-- 搜索取消 -->
+					<div class="cancelSearch" id="cancel">
+						<span id="span">取消</span>
+					</div>
+					<!-- 右听歌识曲 -->
+					<div class="Umusic_open">
+						<div class="Umusic_icon"></div>
+					</div>
+				</div>
+			</div>
+			<!-- 底部工具栏 -->
+			<div class="bottomToolbar" id="bottomToolbar">
+				<div class="bottomToolbar_box">
+					<div class="bottomToolbar_box_icon">
+						<img src="images/index/my_musichall_color_skin_selected.png">
+						<span class="bottomToolbar_icon_sel">音乐馆</span>
+					</div>
+					<div class="bottomToolbar_box_icon">
+						<img src="images/index/my_recommend_color_skin_normal.png">
+						<span>推荐</span>
+					</div>
+					<div class="bottomToolbar_box_icon">
+						<img src="images/index/my_dynamic_color_skin_normal.png">
+						<span>咕咕村</span>
+					</div>
+					<div class="bottomToolbar_box_icon">
+						<img src="images/index/my_music_color_skin_normal.png">
+						<span>我的</span>
+					</div>
+				</div>
+			</div>
+			<!-- 播放组件 -->
+			<div class="playAssembly" id="playAssembly">
+				<div class="playAssembly_bg"></div>
+				<div class="playAssembly_box">
+					<!-- 播放信息 -->
+					<div class="playInf">
+						<div class="playInf_box_img">
+							<img src="images/index/年轮说%20(原作者版).jpg">
+						</div>
+						<div class="playInf_box_span">
+							<span class="">年轮说 (原作者版) - 万万小宇宙</span>
+						</div>
+					</div>
+					<!-- 组件 -->
+					<div class="assembly">
+						<div class="assembly_box">
+							<div class="assembly_boxs playIcon"></div>
+							<div class="assembly_boxs playList"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 整体内容 -->
+			<div class="body">
+				<!-- 广告轮播 -->
+				<div class="adRotation">
+					<div class="adRotation_box">
+						<div class="swiper-container adRotationFrame">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="images/index/hd-picture.png" class="adRotation_img"></div>
+								<div class="swiper-slide"><img src="images/index/adRotation1.webp" class="adRotation_img"></div>
+								<div class="swiper-slide"><img src="images/index/adRotation2.webp" class="adRotation_img"></div>
+								<div class="swiper-slide"><img src="images/index/adRotation3.png" class="adRotation_img"></div>
+								<div class="swiper-slide"><img src="images/index/adRotation4.webp" class="adRotation_img"></div>
+								<div class="swiper-slide"><img src="images/index/adRotation5.webp" class="adRotation_img"></div>
+								<div class="swiper-slide"><img src="images/index/adRotation6.webp" class="adRotation_img"></div>
+								<div class="swiper-slide"><img src="images/index/adRotation7.webp" class="adRotation_img"></div>
+								<div class="swiper-slide"><img src="images/index/adRotation8.webp" class="adRotation_img"></div>
+							</div>
+							<!-- 分页器 -->
+							<div class="swiper-pagination adRotation_pagination"></div>
+						</div>
+					</div>
+				</div>
+				<!-- 快速导航栏 -->
+				<div class="quickNav">
+					<div class="quickNav_box">
+						<div class="quickNav_box_icon">
+							<img src="images/index/classify1.png">
+							<span>歌手</span>
+						</div>
+						<div class="quickNav_box_icon">
+							<img src="images/index/classify2.png">
+							<span>排行</span>
+						</div>
+						<div class="quickNav_box_icon">
+							<img src="images/index/classify3.png">
+							<span>分类歌单</span>
+						</div>
+						<div class="quickNav_box_icon">
+							<img src="images/index/classify4.png">
+							<span>电台</span>
+						</div>
+						<div class="quickNav_box_icon">
+							<img src="images/index/classify5.png">
+							<span>一起唱</span>
+						</div>
+					</div>
+				</div>
+				<!-- 推荐歌单 -->
+				<div class="recSongList">
+					<div class="recSongList_box">
+						<!-- 模块标题 -->
+						<div class="modularTitle">
+							<div class="modularTitle_box">
+								<span>推荐歌单</span>
+							</div>
+							<div class="modularTitle_more">
+								<div class="modularTitle_more_box">
+									<span>歌单广场</span>
+								</div>
+							</div>
+						</div>
+						<!-- 内容 -->
+						<div class="recSongList_cont">
+							<div class="recSongList_cont_box">
+								<!-- 歌单 -->
+								<div class="recSongL_cont_box">
+									<!-- 歌单封面 -->
+									<div class="recSongL_cont_img_box">
+										<img src="images/index/songs-img-1.jpg">
+									</div>
+									<!-- 歌单标题 -->
+									<span class="songTitle">华语流行 · 赶走头顶的乌云</span>
+									<!-- 播放量 -->
+									<span class="playNumber">播放量：1.1万</span>
+								</div>
+								<div class="recSongL_cont_box">
+									<!-- 歌单封面 -->
+									<div class="recSongL_cont_img_box">
+										<img src="images/index/songs-img-2.jpg">
+									</div>
+									<!-- 歌单标题 -->
+									<span class="songTitle">古风  月色如水，旧事繁花斜坠</span>
+									<!-- 播放量 -->
+									<span class="playNumber">播放量：13.5万</span>
+								</div>
+								<div class="recSongL_cont_box">
+									<!-- 歌单封面 -->
+									<div class="recSongL_cont_img_box">
+										<img src="images/index/songs-img-3.jpg">
+									</div>
+									<!-- 歌单标题 -->
+									<span class="songTitle">英文电子：渴望在自己的世界疯狂</span>
+									<!-- 播放量 -->
+									<span class="playNumber">播放量：9.2万</span>
+								</div>
+								<div class="recSongL_cont_box">
+									<!-- 歌单封面 -->
+									<div class="recSongL_cont_img_box">
+										<img src="images/index/songs-img-4.jpg">
+									</div>
+									<!-- 歌单标题 -->
+									<span class="songTitle">「粤式情」轻易浮动一个人的心扉</span>
+									<!-- 播放量 -->
+									<span class="playNumber">播放量：12.7万</span>
+								</div>
+								<div class="recSongL_cont_box">
+									<!-- 歌单封面 -->
+									<div class="recSongL_cont_img_box">
+										<img src="images/index/心情调味剂 · 这些歌有点小俏皮.jpg">
+									</div>
+									<!-- 歌单标题 -->
+									<span class="songTitle">心情调味剂 · 这些歌有点小俏皮</span>
+									<!-- 播放量 -->
+									<span class="playNumber">播放量：10.3万</span>
+								</div>
+								<div class="recSongL_cont_box recSongLast">
+									<!-- 歌单封面 -->
+									<div class="recSongL_cont_img_box">
+										<img src="images/index/慵懒沙发 · 下班后的轻松一刻.jpg">
+									</div>
+									<!-- 歌单标题 -->
+									<span class="songTitle">慵懒沙发 · 下班后的轻松一刻</span>
+									<!-- 播放量 -->
+									<span class="playNumber">播放量：9.7万</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 排行榜 -->
+				<div class="rankingList">
+					<div class="rankingList_box">
+						<!-- 模块标题 -->
+						<div class="modularTitle">
+							<div class="modularTitle_box">
+								<span>排行榜</span>
+							</div>
+							<div class="modularTitle_more">
+								<div class="modularTitle_more_box">
+									<span>更多排行</span>
+								</div>
+							</div>
+						</div>
+						<!-- 内容 -->
+						<div class="rankingList_cont">
+							<div class="rankingList_cont_box">
+								<!-- 排行榜1 -->
+								<div class="rankingL_cont_box">
+									<!-- 排行榜内容 -->
+									<div class="ranking_box">
+										<!-- 背景 -->
+										<div class="ranking_bg ranking_bgImg1"></div>
+										<!-- 榜img -->
+										<div class="ranking_img">
+											<img src="images/index/T002R300x300M000003XzNlG3eSgRq_1.webp" >
+										</div>
+										<!-- 排名 -->
+										<div class="rankingList_list">
+											<div class="ranking_title">
+												<span class="ranking_title_span">飙升榜</span>
+												<span class="ranking_num">_23首歌新上榜</span>
+											</div>
+											<div class="ranking">
+												<span class="ranking_serialNum">01</span>
+												<span class="ranking_songTitle">蹦（Boom）</span>
+												<span class="ranking_singer">&nbsp;- 张艺兴</span>
+											</div>
+											<div class="ranking">
+												<span class="ranking_serialNum">02</span>
+												<span class="ranking_songTitle">勇</span>
+												<span class="ranking_singer">&nbsp;- 杨千嬅</span>
+											</div>
+											<div class="ranking">
+												<span class="ranking_serialNum">03</span>
+												<span class="ranking_songTitle">梦想出鞘</span>
+												<span class="ranking_singer">&nbsp;- ICE/aZi/Smelly D</span>
+											</div>
+										</div>
+									</div>
+									<!-- 榜播放量 -->
+									<div class="ranking_playNum">
+										<!-- 播放量背景 -->
+										<div class="ranking_playNumbg ranking_bgImg1"></div>
+										<div class="ranking_playNum_box">
+											<img src="images/index/播放.png" >
+											<span>1910万</span>
+										</div>
+									</div>
+								</div>
+								<!-- 排行榜2 -->
+								<div class="rankingL_cont_box">
+									<!-- 排行榜内容 -->
+									<div class="ranking_box">
+										<!-- 背景 -->
+										<div class="ranking_bg ranking_bgImg2"></div>
+										<!-- 榜img -->
+										<div class="ranking_img">
+											<img src="images/index/T002R300x300M000001gconQ395bKn_1.webp" >
+										</div>
+										<!-- 排名 -->
+										<div class="rankingList_list">
+											<div class="ranking_title">
+												<span class="ranking_title_span">热歌榜</span>
+												<span class="ranking_num">_31首歌新上榜</span>
+											</div>
+											<div class="ranking">
+												<span class="ranking_serialNum">01</span>
+												<span class="ranking_songTitle">爱，存在</span>
+												<span class="ranking_singer">&nbsp;- 王靖雯不胖</span>
+											</div>
+											<div class="ranking">
+												<span class="ranking_serialNum">02</span>
+												<span class="ranking_songTitle">无人之岛</span>
+												<span class="ranking_singer">&nbsp;- 任然</span>
+											</div>
+											<div class="ranking">
+												<span class="ranking_serialNum">03</span>
+												<span class="ranking_songTitle">晴天</span>
+												<span class="ranking_singer">&nbsp;- 周杰伦</span>
+											</div>
+										</div>
+									</div>
+									<!-- 榜播放量 -->
+									<div class="ranking_playNum ranking_bgImg2">
+										<!-- 播放量背景 -->
+										<div class="ranking_playNumbg ranking_bgImg2"></div>
+										<div class="ranking_playNum_box">
+											<img src="images/index/播放.png" >
+											<span>1950万</span>
+										</div>
+									</div>
+								</div>
+								<!-- 排行榜3 -->
+								<div class="rankingL_cont_box">
+									<!-- 排行榜内容 -->
+									<div class="ranking_box">
+										<!-- 背景 -->
+										<div class="ranking_bg ranking_bgImg3"></div>
+										<!-- 榜img -->
+										<div class="ranking_img">
+											<img src="images/index/T002R300x300M000002RspIW36U4Nn_1.webp" >
+										</div>
+										<!-- 排名 -->
+										<div class="rankingList_list">
+											<div class="ranking_title">
+												<span class="ranking_title_span">新歌榜</span>
+												<span class="ranking_num">_00:00 更新</span>
+											</div>
+											<div class="ranking">
+												<span class="ranking_serialNum">01</span>
+												<span class="ranking_songTitle">爱，存在</span>
+												<span class="ranking_singer">&nbsp;- 林小珂</span>
+											</div>
+											<div class="ranking">
+												<span class="ranking_serialNum">02</span>
+												<span class="ranking_songTitle">How You Like That</span>
+												<span class="ranking_singer">&nbsp;- BLACKPINK</span>
+											</div>
+											<div class="ranking">
+												<span class="ranking_serialNum">03</span>
+												<span class="ranking_songTitle">飞鸟和蝉</span>
+												<span class="ranking_singer">&nbsp;- 任然</span>
+											</div>
+										</div>
+									</div>
+									<!-- 榜播放量 -->
+									<div class="ranking_playNum ranking_bgImg3">
+										<!-- 播放量背景 -->
+										<div class="ranking_playNumbg ranking_bgImg3"></div>
+										<div class="ranking_playNum_box">
+											<img src="images/index/播放.png" >
+											<span>1105.9万</span>
+										</div>
+									</div>
+								</div>
+								<!-- 排行榜4 -->
+								<div class="rankingL_cont_box rankingLast">
+									<!-- 排行榜内容 -->
+									<div class="ranking_box">
+										<!-- 背景 -->
+										<div class="ranking_bg ranking_bgImg4"></div>
+										<!-- 榜img -->
+										<div class="ranking_img">
+											<img src="images/index/T002R300x300M000001SpYpf21jnwY_2.webp" >
+										</div>
+										<!-- 排名 -->
+										<div class="rankingList_list">
+											<div class="ranking_title">
+												<span class="ranking_title_span">流行指数榜</span>
+												<span class="ranking_num">_每天更新</span>
+											</div>
+											<div class="ranking">
+												<span class="ranking_serialNum">01</span>
+												<span class="ranking_songTitle">天上的星星不说话 (Live)</span>
+												<span class="ranking_singer">&nbsp;- 俞天时KOZAY/Rarpid望江晴</span>
+											</div>
+											<div class="ranking">
+												<span class="ranking_serialNum">02</span>
+												<span class="ranking_songTitle">好想爱这个世界啊 (Live)</span>
+												<span class="ranking_singer">&nbsp;- 希林娜依·高</span>
+											</div>
+											<div class="ranking">
+												<span class="ranking_serialNum">03</span>
+												<span class="ranking_songTitle">小行囊</span>
+												<span class="ranking_singer">&nbsp;- 马健涛</span>
+											</div>
+										</div>
+									</div>
+									<!-- 榜播放量 -->
+									<div class="ranking_playNum ranking_bgImg4">
+										<!-- 播放量背景 -->
+										<div class="ranking_playNumbg ranking_bgImg4"></div>
+										<div class="ranking_playNum_box">
+											<img src="images/index/播放.png" >
+											<span>1950万</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 分类专区 -->
+				<div class="sort">
+					<div class="sort_box">
+						<!-- 模块标题 -->
+						<div class="modularTitle">
+							<div class="modularTitle_box">
+								<span>分类专区</span>
+							</div>
+							<div class="modularTitle_more">
+								<div class="modularTitle_more_box">
+									<span>更多分类</span>
+								</div>
+							</div>
+						</div>
+						<!-- 内容 -->
+						<div class="sort_cont">
+							<div class="sort_cont_box">
+								<!-- 分类 -->
+								<div class="sortList">
+									<!-- 分类封面 -->
+									<div class="sortList_img_box">
+										<img src="images/index/wallhaven-d5723g.jpg" class="sortList_img">
+										<!-- 封面标题 -->
+										<div class="sortTitle">
+											<div class="sortTitle_img_box">
+												<img src="images/index/wallhaven-r78k3w.jpg" >
+											</div>
+											<span>ACG专区</span>
+										</div>
+									</div>
+									<!-- 分类标签 -->
+									<span class="sortLabel">ACG专区丨动漫游戏音乐随心听</span>
+								</div>
+								<div class="sortList">
+									<!-- 分类封面 -->
+									<div class="sortList_img_box">
+										<img src="images/index/wallhaven-8xmyzo.jpg" class="sortList_img">
+										<!-- 封面标题 -->
+										<div class="sortTitle">
+											<div class="sortTitle_img_box">
+												<img src="images/index/wallhaven-7675zy.jpg" >
+											</div>
+											<span>国风专区</span>
+										</div>
+									</div>
+									<!-- 分类标签 -->
+									<span class="sortLabel">赏一曲悠悠古韵</span>
+								</div>
+								<div class="sortList">
+									<!-- 分类封面 -->
+									<div class="sortList_img_box">
+										<img src="images/index/wallhaven-2kloxx.jpg" class="sortList_img">
+										<!-- 封面标题 -->
+										<div class="sortTitle">
+											<div class="sortTitle_img_box">
+												<img src="images/index/wallhaven-2kloxx.jpg" >
+											</div>
+											<span>轻音乐专区</span>
+										</div>
+									</div>
+									<!-- 分类标签 -->
+									<span class="sortLabel">轻音天地，娴静淡雅！</span>
+								</div>
+								<div class="sortList">
+									<!-- 分类封面 -->
+									<div class="sortList_img_box">
+										<img src="images/index/wallhaven-3kkkg3.jpg" class="sortList_img">
+										<!-- 封面标题 -->
+										<div class="sortTitle">
+											<div class="sortTitle_img_box">
+												<img src="images/index/wallhaven-2k7vgm.jpg" >
+											</div>
+											<span>电音专区</span>
+										</div>
+									</div>
+									<!-- 分类标签 -->
+									<span class="sortLabel">咕音发电站Vol.3【Dubstep】</span>
+								</div>
+								<div class="sortList">
+									<!-- 分类封面 -->
+									<div class="sortList_img_box">
+										<img src="images/index/wallhaven-wy912q.jpg" class="sortList_img">
+										<!-- 封面标题 -->
+										<div class="sortTitle">
+											<div class="sortTitle_img_box">
+												<img src="images/index/wallhaven-wy912q.jpg" >
+											</div>
+											<span>影视专区</span>
+										</div>
+									</div>
+									<!-- 分类标签 -->
+									<span class="sortLabel">原声音乐一秒入耳，光与影的广阔天地就在眼前。</span>
+								</div>
+								<div class="sortList sortListLast">
+									<!-- 分类封面 -->
+									<div class="sortList_img_box">
+										<img src="images/index/wallhaven-w8roqx.jpg" class="sortList_img">
+										<!-- 封面标题 -->
+										<div class="sortTitle">
+											<div class="sortTitle_img_box">
+												<img src="images/index/wallhaven-w8roqx.jpg" >
+											</div>
+											<span>古典专区</span>
+										</div>
+									</div>
+									<!-- 分类标签 -->
+									<span class="sortLabel">静心聆听，感受古典音乐的艺术</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 音乐人 -->
+				<div class="musician">
+					<div class="musician_box">
+						<!-- 模块标题 -->
+						<div class="modularTitle">
+							<div class="modularTitle_box">
+								<span>乐人</span>
+							</div>
+							<div class="modularTitle_more">
+								<div class="modularTitle_more_box">
+									<span>音乐圈</span>
+								</div>
+							</div>
+						</div>
+						<!-- 内容 -->
+						<div class="musician_cont">
+							<div class="musician_cont_box">
+								<!-- 音乐人列表 -->
+								<div class="musicianList">
+									<div class="musicianList_box">
+										<div class="musicianList_img_box">
+											<!-- 音乐人背景 -->
+											<div class="musicianList_bg musician_bgImg1"></div>
+											<div class="musicianList_img">
+												<img src="images/index/Love%20In%20My%20Pocket-Rich%20Brian.webp" >
+											</div>
+											<!-- 播放按钮 -->
+											<div class="musicianIcon">
+												<!-- 播放按钮背景 -->
+												<div class="musicianIcon_bg musician_bgImg1"></div>
+												<div class="musicianIcon_img">
+													<img src="images/index/播放.png" >
+												</div>
+											</div>
+										</div>
+										<!-- 音乐人信息 -->
+										<div class="musicianInf">
+											<div class="musicianInf_img">
+												<img src="images/index/Rich%20Brian.webp" >
+											</div>
+											<div class="musicianInf_name">
+												<span class="musician_name">Rich Brian</span>
+												<span class="musician_song">Love In My Pocket</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="musicianList">
+									<div class="musicianList_box">
+										<div class="musicianList_img_box">
+											<!-- 音乐人背景 -->
+											<div class="musicianList_bg musician_bgImg2"></div>
+											<div class="musicianList_img">
+												<img src="images/index/T002R300x300M000003PNjJL3xo9e3_1.webp" >
+											</div>
+											<!-- 播放按钮 -->
+											<div class="musicianIcon">
+												<!-- 播放按钮背景 -->
+												<div class="musicianIcon_bg musician_bgImg2"></div>
+												<div class="musicianIcon_img">
+													<img src="images/index/播放.png" >
+												</div>
+											</div>
+										</div>
+										<!-- 音乐人信息 -->
+										<div class="musicianInf">
+											<div class="musicianInf_img">
+												<img src="images/index/T001R300x300M0000013usBl0P73tV.webp" >
+											</div>
+											<div class="musicianInf_name">
+												<span class="musician_name">leegof</span>
+												<span class="musician_song">一握沙</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="musicianList">
+									<div class="musicianList_box">
+										<div class="musicianList_img_box">
+											<!-- 音乐人背景 -->
+											<div class="musicianList_bg musician_bgImg3"></div>
+											<div class="musicianList_img">
+												<img src="images/index/I%20Wish%20I%20Was%20There-瘦子E.SO.webp" >
+											</div>
+											<!-- 播放按钮 -->
+											<div class="musicianIcon">
+												<!-- 播放按钮背景 -->
+												<div class="musicianIcon_bg musician_bgImg3"></div>
+												<div class="musicianIcon_img">
+													<img src="images/index/播放.png" >
+												</div>
+											</div>
+										</div>
+										<!-- 音乐人信息 -->
+										<div class="musicianInf">
+											<div class="musicianInf_img">
+												<img src="images/index/瘦子E.SO.webp" >
+											</div>
+											<div class="musicianInf_name">
+												<span class="musician_name">瘦子E.SO</span>
+												<span class="musician_song">灵魂出窍 OUTTA BODY</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="musicianList">
+									<div class="musicianList_box">
+										<div class="musicianList_img_box">
+											<!-- 音乐人背景 -->
+											<div class="musicianList_bg musician_bgImg4"></div>
+											<div class="musicianList_img">
+												<img src="images/index/T002R300x300M000000ii1df2urJBY_4.webp" >
+											</div>
+											<!-- 播放按钮 -->
+											<div class="musicianIcon">
+												<!-- 播放按钮背景 -->
+												<div class="musicianIcon_bg musician_bgImg4"></div>
+												<div class="musicianIcon_img">
+													<img src="images/index/播放.png" >
+												</div>
+											</div>
+										</div>
+										<!-- 音乐人信息 -->
+										<div class="musicianInf">
+											<div class="musicianInf_img">
+												<img src="images/index/T001R300x300M000003bQEFA3KrvLI.webp" >
+											</div>
+											<div class="musicianInf_name">
+												<span class="musician_name">刘瑞琦</span>
+												<span class="musician_song">某年夏天</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="musicianList">
+									<div class="musicianList_box">
+										<div class="musicianList_img_box">
+											<!-- 音乐人背景 -->
+											<div class="musicianList_bg musician_bgImg5"></div>
+											<div class="musicianList_img">
+												<img src="images/index/T002R300x300M000000W6Vu94cGN0T_1.webp" >
+											</div>
+											<!-- 播放按钮 -->
+											<div class="musicianIcon">
+												<!-- 播放按钮背景 -->
+												<div class="musicianIcon_bg musician_bgImg5"></div>
+												<div class="musicianIcon_img">
+													<img src="images/index/播放.png" >
+												</div>
+											</div>
+										</div>
+										<!-- 音乐人信息 -->
+										<div class="musicianInf">
+											<div class="musicianInf_img">
+												<img src="images/index/T001R300x300M000003va6ln3ruqsB.webp" >
+											</div>
+											<div class="musicianInf_name">
+												<span class="musician_name">End of the World/Gabrielle Aplin/R3HAB</span>
+												<span class="musician_song">Over (R3HAB Remix)</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="musicianList musicianLast">
+									<div class="musicianList_box">
+										<div class="musicianList_img_box">
+											<!-- 音乐人背景 -->
+											<div class="musicianList_bg musician_bgImg6"></div>
+											<div class="musicianList_img">
+												<img src="images/index/T002R300x300M000003XzNlG3eSgRq_1.webp" >
+											</div>
+											<!-- 播放按钮 -->
+											<div class="musicianIcon">
+												<!-- 播放按钮背景 -->
+												<div class="musicianIcon_bg musician_bgImg6"></div>
+												<div class="musicianIcon_img">
+													<img src="images/index/播放.png" >
+												</div>
+											</div>
+										</div>
+										<!-- 音乐人信息 -->
+										<div class="musicianInf">
+											<div class="musicianInf_img">
+												<img src="images/index/T001R300x300M000002MfEld3FWp0R.webp" >
+											</div>
+											<div class="musicianInf_name">
+												<span class="musician_name">张艺兴</span>
+												<span class="musician_song">莲</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			// 广告轮播
+			var mySwiper1 = new Swiper('.adRotationFrame', {
+				// 循环模式选项
+				loop: true,
+				// 自动切换
+				autoplay: true,
+				// 自动切换的时间间隔
+				autoplay: {
+					// 4秒切换一次
+					delay: 4000,
+				},
+
+				// 分页器
+				pagination: {
+					el: '.swiper-pagination',
+					// pagination分页器内元素的类名 -- 未被选中状态
+					bulletClass: 'my-bullet1',
+					// pagination分页器内当前活动块的指示小点的类名 -- 被选中状态
+					bulletActiveClass: 'my-bullet-active1',
+				},
+			})
+		</script>
+	</body>
+</html>

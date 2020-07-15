@@ -1,0 +1,1104 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 26.66666vw;
+}
+
+body {
+	background-color: #efefef;
+}
+
+div {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+/* 苹方常规 */
+@font-face {
+	font-family: PingFangRegular;
+	src: url("../fonts/apple/PingFangRegular.ttf");
+}
+
+/* 苹方细体 */
+@font-face {
+	font-family: PingFangLight;
+	src: url("../fonts/apple/PingFangLight.ttf");
+}
+
+/* 苹方中等 */
+@font-face {
+	font-family: PingFangMedium;
+	src: url("../fonts/apple/PingFangMedium.ttf");
+}
+
+/* 苹方粗体 */
+@font-face {
+	font-family: PingFangBold;
+	src: url("../fonts/apple/PingFangBold.ttf");
+}
+
+.BG {
+	width: 70%;
+	height: 5rem;
+	position: fixed;
+	right: 0;
+	margin-top: .54rem;
+	background: url(../images/index/indexbg.png) no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.mobileTerminal {
+	overflow: hidden;
+}
+
+/* 顶部工具栏 */
+.topToolbar {
+	width: 100%;
+	height: .54rem;
+	position: fixed;
+	top: 0;
+	background: #efefef;
+	z-index: 99;
+}
+
+.topToolbar_box {
+	width: 92%;
+	height: .54rem;
+	margin: 0 auto;
+	display: flex;
+	flex: 1;
+	position: relative;
+}
+
+/* 听歌识曲 */
+.Umusic {
+	width: .3rem;
+	height: .54rem;
+	position: absolute;
+	left: 0;
+	transition: all .2s;
+}
+
+.Umusic_icon {
+	width: 100%;
+	height: .3rem;
+	background: url(../images/index/icon_menu_recognize_lyric.png) no-repeat;
+	background-size: contain;
+	background-position: 0 .02rem;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+/* 搜索框 */
+.search {
+	width: 2.5rem;
+	height: .54rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	transition: all .4s;
+	/* transform: translateX(-48px); */
+}
+
+.search_box {
+	width: 100%;
+	height: .3rem;
+	margin: .12rem 0;
+	position: relative;
+	border: 1px solid #d68ca1;
+	border-radius: 0.3rem;
+	background: url(../images/index/label_search_icon.png) no-repeat;
+	background-size: contain;
+	background-position: .65rem;
+	transition: all .2s;
+	/* background-position: .05rem; */
+}
+
+.search_inpt {
+	height: .3rem;
+	border: 0;
+	background: none;
+	font-family: PingFangMedium;
+	color: #a1a1a1;
+	font-size: .14rem;
+	text-align: left;
+	outline: medium;
+	position: absolute;
+	top: -.01rem;
+	transition: all .2s;
+	left: .95rem;
+	/* left: .35rem; */
+}
+
+/* 用户头像 */
+.user {
+	width: .31rem;
+	height: .54rem;
+	position: absolute;
+	right: 0;
+	z-index: 10;
+	transition: all .7s;
+}
+
+.user_box {
+	width: .3rem;
+	height: .3rem;
+	border-radius: 50%;
+	background: #d68ca1;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	overflow: hidden;
+}
+
+.user_box img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+/* 取消搜索 */
+.cancelSearch {
+	width: .32rem;
+	height: .54rem;
+	position: absolute;
+	right: 0;
+	transition: all .3s;
+	transform: translateX(.48rem);
+	/* transform: translateX(-.5rem); */
+}
+
+/* 右听歌识曲 */
+.Umusic_open {
+	width: .3rem;
+	height: .54rem;
+	position: absolute;
+	right: 0;
+	transition: all .2s;
+}
+
+.cancelSearch span {
+	display: block;
+	width: 100%;
+	height: .2rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	font-family: PingFangMedium;
+	font-size: .16rem;
+	color: #3e4348;
+}
+
+/* 底部工具栏 */
+.bottomToolbar {
+	width: 100%;
+	height: .54rem;
+	border-top: 1px solid #dcdcdc;
+	position: fixed;
+	bottom: 0;
+	background: #f9f9f9;
+	z-index: 99;
+	transition: all .2s;
+}
+
+.bottomToolbar_box {
+	width: 85%;
+	height: .54rem;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.bottomToolbar_box_icon {
+	width: .54rem;
+}
+
+.bottomToolbar_box_icon img {
+	width: .3rem;
+	height: .3rem;
+	display: block;
+	margin: .04rem auto;
+}
+
+.bottomToolbar_box_icon span {
+	display: block;
+	font-family: PingFangMedium;
+	font-size: .12rem;
+	color: #a1a1a1;
+	text-align: center;
+	line-height: .1rem;
+}
+
+.bottomToolbar_icon_sel {
+	color: #e388a1 !important;
+}
+
+/* 播放组件 */
+.playAssembly {
+	width: 100%;
+	height: .49rem;
+	position: fixed;
+	bottom: .54rem;
+	z-index: 99;
+	transition: all .2s;
+}
+
+.playAssembly_bg {
+	width: 100%;
+	height: .44rem;
+	position: absolute;
+	bottom: 0;
+	background: #f9f9f9;
+}
+
+.playAssembly_box {
+	width: 100%;
+	height: .45rem;
+	position: absolute;
+	top: 0;
+}
+
+/* 播放信息 */
+.playInf {
+	width: 74%;
+	height: .45rem;
+	position: absolute;
+	left: 0;
+	display: flex;
+}
+
+.playInf_box_img {
+	width: .45rem;
+	height: .45rem;
+	background: #d68ca1;
+	border-radius: 50%;
+	margin: 0 .05rem;
+	overflow: hidden;
+}
+
+.playInf_box_img img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.playInf_box_span {
+	height: .45rem;
+	flex: 1;
+	margin-left: .05rem;
+	overflow: hidden;
+}
+
+.playInf_box_span span {
+	font-family: PingFangMedium;
+	font-size: .14rem;
+	color: #3e4348;
+	display: block;
+	width: 100%;
+	height: .45rem;
+	line-height: .6rem;
+}
+
+/* 组件 */
+.assembly {
+	width: 26%;
+	height: .45rem;
+	position: absolute;
+	right: 0;
+}
+
+.assembly_box {
+	width: 75%;
+	height: .45rem;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.assembly_boxs {
+	width: .3rem;
+	height: .3rem;
+	margin: .13rem 0 0;
+	background: #E388A1;
+}
+
+.playIcon {
+	background: url(../images/index/minibar_btn_default_play.png) no-repeat;
+	background-size: contain;
+}
+
+.playList {
+	background: url(../images/index/minibar_btn_playlist_highlight.png) no-repeat;
+	background-size: contain;
+}
+
+/* 整体内容 */
+.body {
+	width: 92%;
+	margin: 0 auto;
+	padding-top: .54rem;
+	padding-bottom: 1.2rem;
+	display: flex;
+	flex-direction: column;
+}
+
+/* 广告轮播 */
+.adRotation {
+	width: 100%;
+	height: 1.48rem;
+	position: relative;
+}
+
+.adRotation_box {
+	width: 100%;
+	height: 1.38rem;
+	position: absolute;
+	bottom: 0;
+	border-radius: .1rem;
+	overflow: hidden;
+}
+
+.adRotation_img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+/* 分页器 */
+.adRotation_pagination {
+	bottom: .02rem !important;
+}
+
+/* 默认小圆点效果 */
+.my-bullet1 {
+	display: inline-block;
+	margin: 0 3px;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, .9);
+	/* background: hsla(0,0%,92.9%,.4); */
+}
+
+/* 被选中小圆点效果 */
+.my-bullet-active1 {
+	background: #d68ca1;
+	/* background: #fff; */
+	opacity: 1;
+	width: 12px;
+	height: 7px;
+	border-radius: .03rem;
+}
+
+/* 快速导航栏 */
+.quickNav {
+	width: 100%;
+	height: .7rem;
+	position: relative;
+}
+
+.quickNav_box {
+	width: 100%;
+	height: .5rem;
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.quickNav_box_icon {
+	width: .6rem;
+}
+
+.quickNav_box_icon img {
+	width: .26rem;
+	height: .26rem;
+	display: block;
+	margin: 0 auto .05rem;
+}
+
+.quickNav_box_icon span {
+	display: block;
+	font-family: PingFangRegular;
+	font-size: .14rem;
+	color: #3e4348;
+	text-align: center;
+	line-height: .2rem;
+}
+
+/* 推荐歌单 */
+.recSongList {
+	width: 100%;
+	height: 2.05rem;
+	position: relative;
+}
+
+.recSongList_box {
+	width: 100%;
+	height: 1.8rem;
+	position: absolute;
+	bottom: 0;
+}
+
+/* 模块标题 */
+.modularTitle {
+	width: 100%;
+	height: .25rem;
+	margin-bottom: .05rem;
+	position: relative;
+}
+
+.modularTitle_box {
+	width: 50%;
+	height: .25rem;
+	position: absolute;
+	left: 0;
+}
+
+.modularTitle_box span {
+	display: block;
+	font-family: PingFangBold;
+	font-size: .18rem;
+	color: #3e4348;
+}
+
+.modularTitle_more {
+	width: 50%;
+	height: .25rem;
+	position: absolute;
+	right: 0;
+}
+
+.modularTitle_more_box {
+	width: .7rem;
+	height: .25rem;
+	border: 1px solid #d68ca1;
+	border-radius: .2rem;
+	position: absolute;
+	right: 0;
+}
+
+.modularTitle_more_box span {
+	display: block;
+	width: 100%;
+	font-family: PingFangMedium;
+	font-size: .12rem;
+	color: #d68ca1;
+	text-align: center;
+	height: .25rem;
+	line-height: .25rem;
+}
+
+/* 内容 */
+.recSongList_cont {
+	width: 100%;
+	height: 1.5rem;
+	overflow-y: auto;
+	/* 可滑动 */
+}
+
+/*自定义滚动条的伪对象选择器, CSS 可以隐藏滚动条*/
+.recSongList_cont::-webkit-scrollbar {
+	display: none;
+}
+
+.recSongList_cont_box {
+	display: flex;
+	flex-direction: row;
+	width: 6.94rem;
+}
+
+/* 歌单 */
+.recSongL_cont_box {
+	width: 1.09rem;
+	height: 1.5rem;
+	margin-right: .08rem;
+}
+
+.recSongLast {
+	margin: 0;
+}
+
+/* 歌单封面 */
+.recSongL_cont_img_box {
+	width: 100%;
+	height: 1.09rem;
+	border-radius: .1rem;
+	overflow: hidden;
+	background: #D68CA1;
+}
+
+.recSongL_cont_img_box img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+/* 歌单标题 */
+.songTitle {
+	display: block;
+	width: 100%;
+	font-family: PingFangMedium;
+	font-size: .14rem;
+	color: #3e4348;
+	text-align: left;
+	margin-top: .04rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* 播放量 */
+.playNumber {
+	display: block;
+	width: 100%;
+	font-family: PingFangMedium;
+	font-size: .12rem;
+	color: #a1a1a1;
+	text-align: left;
+}
+
+/* 排行榜 */
+.rankingList {
+	width: 100%;
+	height: 1.7rem;
+	position: relative;
+}
+
+.rankingList_box {
+	width: 100%;
+	height: 1.45rem;
+	position: absolute;
+	bottom: 0;
+}
+
+/* 内容 */
+.rankingList_cont {
+	width: 100%;
+	height: 1.2rem;
+	position: absolute;
+	bottom: 0;
+	overflow-y: auto;
+	/* 可滑动 */
+}
+
+/*自定义滚动条的伪对象选择器, CSS 可以隐藏滚动条*/
+.rankingList_cont::-webkit-scrollbar {
+	display: none;
+}
+
+.rankingList_cont_box {
+	display: flex;
+	flex-direction: row;
+	width: 14.04rem;
+}
+
+/* 排行榜1 */
+.rankingL_cont_box {
+	width: 3.45rem;
+	height: 1.2rem;
+	margin-right: .08rem;
+	position: relative;
+}
+
+.rankingLast {
+	margin: 0;
+}
+
+/* 背景 */
+.ranking_bg {
+	width: 100%;
+	height: 1.1rem;
+	position: absolute;
+	filter: blur(.9rem);
+}
+
+.ranking_bgImg1 {
+	background: url(../images/index/T002R300x300M000003XzNlG3eSgRq_1.webp) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.ranking_bgImg2 {
+	background: url(../images/index/T002R300x300M000001gconQ395bKn_1.webp) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.ranking_bgImg3 {
+	background: url(../images/index/T002R300x300M000002RspIW36U4Nn_1.webp) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.ranking_bgImg4 {
+	background: url(../images/index/T002R300x300M000001SpYpf21jnwY_2.webp) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+/* 排行榜内容 */
+.ranking_box {
+	width: 100%;
+	height: 1.1rem;
+	display: flex;
+	position: absolute;
+	bottom: .06rem;
+	border-radius: .1rem;
+	overflow: hidden;
+}
+
+/* 榜img */
+.ranking_img {
+	width: 1.1rem;
+	height: 1.1rem;
+	border-radius: .1rem;
+	overflow: hidden;
+	position: relative;
+}
+
+.ranking_img img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+/* 榜播放量 */
+.ranking_playNum {
+	width: .7rem;
+	height: .21rem;
+	border-radius: .1rem;
+	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	background: #fff;
+}
+
+/* 播放量背景 */
+.ranking_playNumbg {
+	width: .7rem;
+	height: .21rem;
+	position: absolute;
+	filter: blur(.15rem);
+}
+
+.ranking_playNum_box {
+	width: 100%;
+	display: flex;
+	position: relative;
+}
+
+.ranking_playNum img {
+	width: .13rem;
+	height: .13rem;
+	display: block;
+	margin-top: .04rem;
+	margin-left: .05rem;
+}
+
+.ranking_playNum span {
+	display: block;
+	line-height: .22rem;
+	margin-left: 0.03rem;
+	font-family: PingFangMedium;
+	font-size: .12rem;
+	color: #fff;
+}
+
+/* 排名 */
+.rankingList_list {
+	height: 1.1rem;
+	flex: 1;
+	margin-left: .2rem;
+}
+
+.ranking_title {
+	width: 100%;
+	height: .25rem;
+	margin-top: .1rem;
+	display: flex;
+}
+
+.ranking_title_span {
+	display: block;
+	font-family: PingFangBold;
+	font-size: .18rem;
+	color: #3e4348;
+}
+
+.ranking_num {
+	display: block;
+	flex: 1;
+	font-family: PingFangRegular;
+	font-size: .12rem;
+	color: #3e4348;
+	line-height: 0.3rem;
+	margin-left: .02rem;
+}
+
+.ranking {
+	width: 100%;
+	height: .2rem;
+	display: flex;
+	margin-top: .02rem;
+}
+
+.ranking span {
+	display: block;
+	color: #3e4348;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.ranking_serialNum {
+	font-family: PingFangBold;
+	font-size: .18rem;
+	line-height: .22rem;
+	margin-right: .05rem;
+}
+
+.ranking_songTitle {
+	max-width: 1rem;
+	font-family: PingFangMedium;
+	font-size: .14rem;
+}
+
+.ranking_singer {
+	max-width: .7rem;
+	font-family: PingFangRegular;
+	font-size: .14rem;
+}
+
+/* 分类专区 */
+.sort {
+	width: 100%;
+	height: 1.85rem;
+	position: relative;
+}
+
+.sort_box {
+	width: 100%;
+	height: 1.6rem;
+	position: absolute;
+	bottom: 0;
+}
+
+/* 内容 */
+.sort_cont {
+	width: 100%;
+	height: 1.3rem;
+	position: relative;
+	overflow-y: auto;
+	/*可滑动*/
+}
+
+/*自定义滚动条的伪对象选择器, CSS 可以隐藏滚动条*/
+.sort_cont::-webkit-scrollbar {
+	display: none;
+}
+
+.sort_cont_box {
+	display: flex;
+	flex-direction: row;
+	width: 10.48rem;
+}
+
+.sortList {
+	width: 1.68rem;
+	height: 1.3rem;
+	margin-right: .08rem;
+}
+
+.sortListLast {
+	margin: 0;
+}
+
+/* 分类封面 */
+.sortList_img_box {
+	width: 100%;
+	height: 1.1rem;
+	border-radius: .1rem;
+	overflow: hidden;
+	background: #D68CA1;
+	position: relative;
+}
+
+.sortList_img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+/* 分类标题 */
+.sortTitle {
+	width: 100%;
+	height: .24rem;
+	position: absolute;
+	bottom: .04rem;
+	display: flex;
+}
+
+.sortTitle_img_box {
+	width: .24rem;
+	height: .24rem;
+	border-radius: 50%;
+	margin-left: .04rem;
+	overflow: hidden;
+}
+
+.sortTitle_img_box img {
+	height: 100%;
+	display: block;
+}
+
+.sortTitle span {
+	display: block;
+	flex: 1;
+	height: .24rem;
+	margin-left: .05rem;
+	font-family: PingFangBold;
+	font-size: .12rem;
+	color: #fff;
+	line-height: .24rem;
+}
+
+/* 分类标签 */
+.sortLabel {
+	display: block;
+	width: 100%;
+	font-family: PingFangMedium;
+	font-size: .12rem;
+	color: #3e4348;
+	text-align: left;
+	margin-top: .03rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* 音乐人 */
+.musician {
+	width: 100%;
+	height: 2.05rem;
+	position: relative;
+}
+
+.musician_box {
+	width: 100%;
+	height: 1.8rem;
+	position: absolute;
+	bottom: 0;
+}
+
+/* 内容 */
+.musician_cont {
+	width: 100%;
+	height: 1.55rem;
+	position: relative;
+	overflow-y: auto;
+	/*可滑动*/
+}
+
+/*自定义滚动条的伪对象选择器, CSS 可以隐藏滚动条*/
+.musician_cont::-webkit-scrollbar {
+	display: none;
+}
+
+.musician_cont_box {
+	display: flex;
+	flex-direction: row;
+	width: 10.48rem;
+}
+
+/* 音乐人列表 */
+.musicianList {
+	width: 1.68rem;
+	height: 1.55rem;
+	margin-right: .08rem;
+}
+
+.musicianLast {
+	margin: 0;
+}
+
+.musicianList_box {
+	width: 100%;
+	height: 1.55rem;
+	position: relative;
+}
+
+.musicianList_img_box {
+	width: 100%;
+	height: 1.1rem;
+	border-radius: .1rem;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+}
+
+/* 音乐人背景 */
+.musicianList_bg {
+	width: 100%;
+	height: 1.1rem;
+	position: absolute;
+	filter: blur(20px) brightness(120%);
+}
+
+.musician_bgImg1 {
+	background: url(../images/index/Love%20In%20My%20Pocket-Rich%20Brian.webp) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.musician_bgImg2 {
+	background: url(../images/index/T002R300x300M000003PNjJL3xo9e3_1.webp) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.musician_bgImg3 {
+	background: url(../images/index/I%20Wish%20I%20Was%20There-瘦子E.SO.webp) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.musician_bgImg4 {
+	background: url(../images/index/T002R300x300M000000ii1df2urJBY_4.webp) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.musician_bgImg5 {
+	background: url(../images/index/T002R300x300M000000W6Vu94cGN0T_1.webp) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.musician_bgImg6 {
+	background: url(../images/index/T002R300x300M000003XzNlG3eSgRq_1.webp) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.musicianList_img {
+	width: .9rem;
+	height: .9rem;
+	border-radius: .1rem;
+	overflow: hidden;
+	position: absolute;
+	top: .07rem;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+
+.musicianList_img img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+/* 播放按钮 */
+.musicianIcon {
+	width: .3rem;
+	height: .2rem;
+	border-radius: .1rem;
+	overflow: hidden;
+	position: absolute;
+	left: 35px;
+	bottom: 5px;
+	background: #fff;
+}
+
+/* 播放按钮背景 */
+.musicianIcon_bg {
+	width: .3rem;
+	height: .2rem;
+	position: absolute;
+	filter: blur(.12rem);
+}
+
+.musicianIcon_img {
+	width: .15rem;
+	height: .12rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+.musicianIcon_img img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+/* 音乐人信息 */
+.musicianInf {
+	width: 100%;
+	height: .33rem;
+	position: absolute;
+	bottom: .01rem;
+	display: flex;
+}
+
+.musicianInf_img {
+	width: .33rem;
+	height: .33rem;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.musicianInf_img img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.musicianInf_name {
+	flex: 1;
+	margin-left: .12rem;
+	max-width: 1.22rem;
+}
+
+.musicianInf_name span {
+	display: block;
+	width: 100%;
+	font-size: .12rem;
+	color: #3e4348;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.musician_name {
+	font-family: PingFangBold;
+}
+
+.musician_song {
+	font-family: PingFangMedium;
+}
